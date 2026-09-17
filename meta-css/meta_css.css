@@ -1,0 +1,104 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #d3d3d3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2e2e2e;
+}
+
+#content {
+    width: min(1100px, 88vw);
+    min-height: 760px;
+    margin: 40px auto;
+    padding: 48px 30px 42px;
+    background: #d8d8d8;
+    border: 1px solid #c3c3c3;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    font-size: clamp(2.5rem, 3vw, 4rem);
+    line-height: 1.1;
+    font-weight: 900;
+    letter-spacing: -0.06em;
+}
+
+.subtitle {
+    margin: 18px auto 0;
+    max-width: 760px;
+    text-align: center;
+    font-size: clamp(1.05rem, 1.45vw, 2rem);
+    font-weight: 400;
+    color: #2b2b2b;
+}
+
+.rule {
+    width: min(620px, 64%);
+    height: 4px;
+    margin: 18px auto 22px;
+    background: #1f8fd8;
+}
+
+.pic {
+    text-align: center;
+    margin: 10px auto 28px;
+}
+
+.pic img {
+    display: block;
+    width: min(500px, 75%);
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.topic {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.topic h2 {
+    margin: 0;
+    font-size: clamp(2rem, 2.2vw, 3rem);
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+}
+
+.topic ul {
+    list-style: none;
+    margin: 16px auto 0;
+    padding: 0;
+    max-width: 560px;
+}
+
+.topic li {
+    margin: 6px 0;
+    font-size: clamp(1rem, 1.2vw, 1.4rem);
+    line-height: 1.5;
+    color: #2d2d2d;
+}
+
+.topic + .topic {
+    margin-top: 26px;
+}
+
+@media (max-width: 650px) {
+    #content {
+        width: 94vw;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .pic img {
+        width: min(420px, 90%);
+    }
+}
