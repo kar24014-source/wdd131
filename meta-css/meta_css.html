@@ -3,47 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML, CSS, and JS</title>
-    <link href="meta_css.css" rel="stylesheet" />
+    <title>Document</title>
+    <link rel="stylesheet" href="meta_css.css" />
   </head>
   <body>
-    <main id="content">
+    <div id="content">
       <h1>HTML, CSS, and JS</h1>
-      <p class="subtitle">
+      <p>
         The foundational technologies that power websites and web applications
       </p>
-      <div class="rule" aria-hidden="true"></div>
-
-      <div class="pic" aria-label="Web language logos">
-        <img
-          src="https://wddbyui.github.io/wdd131/images/trifecta.png"
-          alt="JS, CSS, and HTML logos"
-        />
+      <hr />
+      <div id="logos"> 
+      <img
+        src="https://wddbyui.github.io/wdd131/images/trifecta.png"
+        alt="JS, CSS, and HTML logos"
+      />
       </div>
-
-      <section class="topic">
+      <div id="topics">
         <h2>HyperText Markup Language</h2>
-        <ul>
+        <ul class="list">
           <li>Defines the structure and content of a web page.</li>
           <li>Without HTML there's nothing for the browser to display.</li>
         </ul>
-      </section>
-
-      <section class="topic">
         <h2>Cascading Style Sheets</h2>
-        <ul>
+        <ul class="list">
           <li>Controls how the HTML elements look.</li>
           <li>Without CSS pages look plain and unstyled.</li>
         </ul>
-      </section>
-
-      <section class="topic">
         <h2>JavaScript</h2>
-        <ul>
+        <ul class="list">
           <li>Adds interactivity and dynamic behavior.</li>
-          <li>Without JavaScript nothing on the page responds dynamically to user actions.</li>
+          <li>
+            Without JavaScript nothing on the page responds dynamically to user
+            actions.
+          </li>
         </ul>
-      </section>
-    </main>
+      </div>
+    </div>
   </body>
 </html>
