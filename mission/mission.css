@@ -1,0 +1,86 @@
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #fff;
+    color: #111;
+    font-size: 0.875rem;
+    line-height: 1.45;
+    margin: 34px auto;
+    padding: 34px 0;
+}
+
+body > * {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body {
+    border: 1px solid #bbb;
+    box-sizing: border-box;
+    min-height: 590px;
+    max-width: 60%;
+}
+
+.header {
+    width: 400px;
+    text-align: center;
+    padding-top: 48px;
+}
+
+h1 {
+    font-size: 1.7rem;
+    letter-spacing: 0.08em;
+    margin: 0 0 10px;
+}
+
+
+
+.university {
+    color: #1676bd;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    margin: 0;
+}
+
+.mission-text {
+    margin: 33px auto 14px;
+    width: 400px;
+}
+
+.list {
+    margin: 0 auto;
+    width: 400px;
+    text-align: left;
+}
+
+main > p.list {
+    font-style: italic;
+    margin-bottom: 14px;
+}
+
+ul.list {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.list li {
+    margin-bottom: 14px;
+    padding-left: 14px;
+    text-indent: -14px;
+}
+
+.logo {
+    display: block;
+    margin: 27px auto 0;
+    width: 86px;
+}
+
+
+.line {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 0 auto;
+    width: 400px;
+}
