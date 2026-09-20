@@ -5,13 +5,8 @@ body {
     color: #111;
     font-size: 0.875rem;
     line-height: 1.45;
-    margin: 34px auto;
+    margin: 0 auto;
     padding: 34px 0;
-}
-
-body > * {
-    margin-right: auto;
-    margin-left: auto;
 }
 
 body {
@@ -22,7 +17,7 @@ body {
 }
 
 .header {
-    width: 400px;
+    width: 100%;
     text-align: center;
     padding-top: 48px;
 }
