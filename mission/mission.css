@@ -7,13 +7,16 @@ body {
     line-height: 1.45;
     margin: 0 auto;
     padding: 34px 0;
-}
-
-body {
     border: 1px solid #bbb;
     box-sizing: border-box;
     min-height: 590px;
     max-width: 60%;
+}
+
+body.dark {
+    background-color: #111;
+    color: #f5f5f5;
+    border-color: #444;
 }
 
 .header {
@@ -37,6 +40,10 @@ h1 {
     font-weight: 600;
     letter-spacing: 0.22em;
     margin: 0;
+}
+
+body.dark .university {
+    color: #dbeafe;
 }
 
 .mission-text {
@@ -78,4 +85,8 @@ ul.list li {
     border-top: 1px solid #ddd;
     margin: 0 auto;
     width: 400px;
+}
+
+body.dark .line {
+    border-top-color: #444;
 }
