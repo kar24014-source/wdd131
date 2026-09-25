@@ -44,3 +44,9 @@ img {
     list-style-type: none;
     text-align: center;
 }
+
+#dropdown-menu {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+}
