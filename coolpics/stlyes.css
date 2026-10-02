@@ -6,9 +6,9 @@
 }
 
 body {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     background-color: #ccc;
     color: #111;
     font-family: Arial, sans-serif;
@@ -16,7 +16,7 @@ body {
 
 .header {
     background-color: #2f80e7;
-    padding: 8px 12px 0;
+    padding: 20px 0 12px;
     text-align: center;
     color: white;
 }
@@ -49,6 +49,13 @@ body {
 main {
     flex: 1;
     width: 100%;
+    display: flex;
+}
+
+main > section {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
 }
 
 .section-title {
@@ -56,15 +63,17 @@ main {
     padding: 10px 12px 8px;
     font-size: 18px;
     font-weight: normal;
+
 }
 
 .gallery {
     display: grid;
     grid-template-columns: minmax(0, 145px);
-    gap: 14px;
-    padding: 12px 16px 20px;
+    column-gap: 60px;
+    gap: 16px;
+    padding: 0 16px 12px;
     justify-content: center;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .gallery img {
@@ -83,14 +92,14 @@ main {
 }
 
 footer {
+    position: static;
     background-color: #2f80e7;
     color: white;
-    border-top: 3px solid #d67642;
-    min-height: 44px;
     padding: 12px 16px;
     text-align: center;
     font-size: 12px;
     line-height: 1.5;
+
 }
 
 @media (min-width: 600px) {
@@ -102,5 +111,6 @@ footer {
 @media (min-width: 900px) {
     .gallery {
         grid-template-columns: repeat(3, minmax(0, 145px));
+        gap: 24px;
     }
 }
