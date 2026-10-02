@@ -3,16 +3,12 @@
 
 body {
   font-family: Roboto, sans-serif;
-  margin: 0;
-  padding: 0;
 }
 header,
 main,
 footer {
   max-width: 1000px;
-  width: calc(100% - 2rem);
   margin: 1rem auto;
-  box-sizing: border-box;
   border: 1px solid #ccc;
   padding: 1rem;
   background-color: lightblue;
@@ -21,14 +17,13 @@ h1 {
     text-align: center;
 }
 section {
-  padding: 1rem;
+  padding: 20px;
   background-color: white;
-  margin: 0.75rem 0;
+  margin: 1em;
   border: 1px solid #ccc;
-  box-sizing: border-box;
 }
 nav a {
-    padding: 0.75rem;
+    padding: 20px;
     color: black;
     display: none;
 }
@@ -53,32 +48,22 @@ footer {
           
 @media screen and (min-width: 700px) {
   header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
   }
 
   .menu-btn {
     display: none;
   }
-
-  nav {
-    display: flex;
-  }
-
   nav a {
-    display: block;
+    display: inline-block;
   }
-
-  main {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
-  }
-
-  section {
-    margin: 0;
+  nav {
+    text-align: right;
   }
 }
-          
+
+@media screen and (min-width: 1000px) {
+  main {
+    grid-template-columns : 1fr 1fr;
+  }
+}
