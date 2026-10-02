@@ -1,0 +1,84 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header,
+main,
+footer {
+  max-width: 1000px;
+  width: calc(100% - 2rem);
+  margin: 1rem auto;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background-color: lightblue;
+}
+h1 {
+    text-align: center;
+}
+section {
+  padding: 1rem;
+  background-color: white;
+  margin: 0.75rem 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+nav a {
+    padding: 0.75rem;
+    color: black;
+    display: none;
+}
+nav a:hover {
+    text-decoration: none;
+    color: #616061;
+}
+.menu-btn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin: 5px 0;
+}
+footer {
+    text-align: center;
+}
+          
+@media screen and (min-width: 700px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+  }
+
+  nav a {
+    display: block;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  section {
+    margin: 0;
+  }
+}
+          
