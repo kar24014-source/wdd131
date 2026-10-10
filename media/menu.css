@@ -47,8 +47,13 @@ nav a:hover {
 footer {
     text-align: center;
 }
-nav.open a {
-    display: block;
+@media screen and (max-width: 699px) {
+    nav.open a {
+        display: block;
+        padding: 20px;
+        text-align: center;
+        border-top: 1px solid #9caeb2;
+    }
 }
 
 @media screen and (min-width: 700px) {
