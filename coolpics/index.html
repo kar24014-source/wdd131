@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cool Pics</title>
     <link rel="stylesheet" href="stlyes.css">
+    <script src="coolpics.js" defer></script>
 </head>
 <body>
     <header class="header">
         <h1>Cool Pics 📸</h1>
-        <nav class="nav" aria-label="Main navigation">
+        <button class="menu-btn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav" id="main-nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="#gallery">Posts</a>
             <a href="#gallery">Essays</a>
@@ -21,18 +27,22 @@
         <section aria-labelledby="gallery-title">
             <h2 class="section-title" id="gallery-title">Current Work</h2>
             <div class="gallery">
-                <img src="image.jpg" alt="Steaming geothermal pools beneath a blue sky">
-                <img src="image.jpg" alt="Steaming geothermal pools beneath a blue sky">
-                <img src="image.jpg" alt="Steaming geothermal pools beneath a blue sky">
-                <img src="image.jpg" alt="Steaming geothermal pools beneath a blue sky">
-                <img src="image.jpg" alt="Steaming geothermal pools beneath a blue sky">
-                <img src="image.jpg" alt="Steaming geothermal pools beneath a blue sky">
-                <img src="image.jpg" alt="Steaming geothermal pools beneath a blue sky">
-                <img src="image.jpg" alt="Steaming geothermal pools beneath a blue sky">
-                <img src="image.jpg" alt="Steaming geothermal pools beneath a blue sky">
+                <img src="image.jpg" alt="Steaming geothermal pools beneath a blue sky" tabindex="0" role="button" aria-haspopup="dialog">
+                <img src="image.jpg" alt="Steaming geothermal pools beneath a blue sky" tabindex="0" role="button" aria-haspopup="dialog">
+                <img src="image.jpg" alt="Steaming geothermal pools beneath a blue sky" tabindex="0" role="button" aria-haspopup="dialog">
+                <img src="image.jpg" alt="Steaming geothermal pools beneath a blue sky" tabindex="0" role="button" aria-haspopup="dialog">
+                <img src="image.jpg" alt="Steaming geothermal pools beneath a blue sky" tabindex="0" role="button" aria-haspopup="dialog">
+                <img src="image.jpg" alt="Steaming geothermal pools beneath a blue sky" tabindex="0" role="button" aria-haspopup="dialog">
+                <img src="image.jpg" alt="Steaming geothermal pools beneath a blue sky" tabindex="0" role="button" aria-haspopup="dialog">
+                <img src="image.jpg" alt="Steaming geothermal pools beneath a blue sky" tabindex="0" role="button" aria-haspopup="dialog">
+                <img src="image.jpg" alt="Steaming geothermal pools beneath a blue sky" tabindex="0" role="button" aria-haspopup="dialog">
             </div>
         </section>
     </main>
+    <dialog class="image-modal" aria-label="Expanded gallery image">
+        <button class="modal-close" type="button" aria-label="Close image">×</button>
+        <img class="modal-image" alt="">
+    </dialog>
     <footer>
         <p>&copy; 2026 Cool Pics All rights reserved 📸</p>
     </footer>

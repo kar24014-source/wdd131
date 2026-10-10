@@ -26,6 +26,38 @@ body {
     font-weight: normal;
 }
 
+.menu-btn {
+    display: none;
+    width: 44px;
+    height: 40px;
+    margin: 8px auto 0;
+    padding: 7px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-btn span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 4px 0;
+    background-color: white;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.menu-btn.is-open span:first-child {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-btn.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.is-open span:last-child {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 .nav {
     display: flex;
     justify-content: center;
@@ -90,6 +122,55 @@ main > section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
+.gallery img {
+    cursor: pointer;
+}
+
+.gallery img:focus-visible,
+.menu-btn:focus-visible,
+.modal-close:focus-visible {
+    outline: 3px solid #d67642;
+    outline-offset: 3px;
+}
+
+.image-modal {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    max-width: min(90vw, 1100px);
+    max-height: 90vh;
+    padding: 12px;
+    border: 0;
+    background: #111;
+    overflow: visible;
+}
+
+.image-modal::backdrop {
+    background: rgb(0 0 0 / 80%);
+}
+
+.modal-image {
+    display: block;
+    max-width: 100%;
+    max-height: calc(90vh - 24px);
+    object-fit: contain;
+}
+
+.modal-close {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    width: 36px;
+    height: 36px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: #111;
+    color: white;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+}
+
 footer {
     position: static;
     background-color: #2f80e7;
@@ -99,4 +180,31 @@ footer {
     font-size: 12px;
     line-height: 1.5;
 
+}
+
+@media screen and (max-width: 699px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        padding: 8px 0 0;
+    }
+
+    .nav.is-open {
+        display: flex;
+    }
+
+    .nav a {
+        padding: 12px;
+        border-top: 1px solid rgb(255 255 255 / 45%);
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .nav {
+        display: flex;
+    }
 }
