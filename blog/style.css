@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.site-title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 auto;
+    color: rgb(70, 1, 70);
+}
+
+.nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    color: rgb(255, 0, 0);
+}
+.navs {
+  color: rgb(255, 0, 0); 
+
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.book-review {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  justify-items: center;
+}
+
+.book-meta {
+  justify-self: end;
+}
+
+.cover {
+  margin: 0;
+}
+.site-footer{
+    margin: 0 auto;
+    text-align: center;
+}
+.name{
+    color: rgb(255, 0, 0)
+}
+#book-title{
+    color:rgb(255, 0, 0)
+}
+.span{
+    color: rgb(202, 178, 23);
+
+}
+.line {
+  border: 0;
+  height: 2px;
+  background-color: rgb(202, 178, 23);
+
+}
+@media (min-width: 640px) {
+  .book-review {
+    grid-template-columns: 200px minmax(0, 1fr);
+    grid-template-areas:
+      "meta title"
+      "meta cover"
+      "meta review";
+    gap: 8px 20px;
+    align-items: start;
+  }
+
+  .book-meta {
+    grid-area: meta;
+    align-self: stretch;
+    justify-self: stretch;
+    border-right: 1px solid #efad78;
+    padding-right: 20px;
+  }
+
+  #book-title { grid-area: title; }
+  .cover { grid-area: cover; justify-self: center; }
+  .review-copy { grid-area: review; }
+}
