@@ -182,7 +182,7 @@ footer {
 
 }
 
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 700px) {
     .menu-btn {
         display: block;
     }
@@ -203,7 +203,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width:   1000px) {
     .nav {
         display: flex;
     }
