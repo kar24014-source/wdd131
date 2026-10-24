@@ -39,4 +39,70 @@ const articles = [
 		stars: "⭐⭐⭐⭐⭐"
 	}
 ];
-                
+
+const reviewList = document.querySelector('#book-reviews');
+
+articles.forEach((article, index) => {
+	const review = document.createElement('article');
+	review.className = 'book-review';
+	review.id = index === 0 ? 'book-review' : `book-review-${article.id}`;
+	review.setAttribute('aria-labelledby', `book-title-${article.id}`);
+
+	const metadata = document.createElement('dl');
+	metadata.className = 'book-meta';
+	metadata.setAttribute('aria-label', 'Book information');
+
+	const details = [
+		['Review date', article.date],
+		['Recommended age', article.ages],
+		['Genre', article.genre]
+	];
+
+	details.forEach(([label, value]) => {
+		const entry = document.createElement('div');
+		const term = document.createElement('dt');
+		const description = document.createElement('dd');
+
+		term.className = 'visually-hidden';
+		term.textContent = label;
+		description.textContent = value;
+		entry.append(term, description);
+		metadata.append(entry);
+	});
+
+	const ratingEntry = document.createElement('div');
+	const ratingTerm = document.createElement('dt');
+	const ratingDescription = document.createElement('dd');
+	const ratingStars = document.createElement('span');
+	const rating = Array.from(article.stars).length;
+
+	ratingTerm.className = 'visually-hidden';
+	ratingTerm.textContent = 'Rating';
+	ratingDescription.className = 'rating';
+	ratingDescription.setAttribute('aria-label', `${rating} out of 5 stars`);
+	ratingStars.className = 'span';
+	ratingStars.setAttribute('aria-hidden', 'true');
+	ratingStars.textContent = article.stars;
+	ratingDescription.append(ratingStars);
+	ratingEntry.append(ratingTerm, ratingDescription);
+	metadata.append(ratingEntry);
+
+	const title = document.createElement('h2');
+	title.id = `book-title-${article.id}`;
+	title.textContent = article.title;
+
+	const cover = document.createElement('figure');
+	cover.className = 'cover';
+	const image = document.createElement('img');
+	image.src = article.imgSrc;
+	image.alt = article.imgAlt;
+	image.loading = 'lazy';
+	cover.append(image);
+
+	const reviewCopy = document.createElement('p');
+	reviewCopy.className = 'review-copy';
+	reviewCopy.textContent = article.description;
+
+	review.append(metadata, title, cover, reviewCopy);
+	reviewList.append(review);
+});

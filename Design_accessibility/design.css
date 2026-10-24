@@ -47,8 +47,8 @@ header, footer {
     border-radius: 8px;
     margin: 0 auto;
 }
-#desc {
-    grid-column: 1/3;
+.movie-description {
+    grid-column: 1 / 3;
 }
 
 @media (min-width: 600px) {

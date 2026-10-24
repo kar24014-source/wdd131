@@ -55,7 +55,7 @@ body {
 .name{
     color: rgb(255, 0, 0)
 }
-#book-title{
+.book-review h2 {
     color:rgb(255, 0, 0)
 }
 .span{
@@ -87,7 +87,7 @@ body {
     padding-right: 20px;
   }
 
-  #book-title { grid-area: title; }
+  .book-review h2 { grid-area: title; }
   .cover { grid-area: cover; justify-self: center; }
   .review-copy { grid-area: review; }
 }
