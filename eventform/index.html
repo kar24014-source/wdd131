@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sign up for an event and receive your event ticket."
+    />
+    <title>Event Ticket Form</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <form id="event-form" novalidate>
+        <h1>Event Ticket</h1>
+        <div class="form-grid">
+          <div>
+            <label for="first-name">First Name</label>
+            <input
+              type="text"
+              id="first-name"
+              name="firstName"
+              autocomplete="given-name"
+              required
+            />
+          </div>
+          <div>
+            <label for="last-name">Last Name</label>
+            <input
+              type="text"
+              id="last-name"
+              name="lastName"
+              autocomplete="family-name"
+              required
+            />
+          </div>
+          <div class="full-width">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+          <div>
+            <label for="attendee-type">Type</label>
+            <select id="attendee-type" name="attendeeType" required>
+              <option value="">Choose one</option>
+              <option value="student">Student</option>
+              <option value="guest">Guest</option>
+            </select>
+          </div>
+          <div>
+            <label for="event-date">Event Date</label>
+            <input
+              type="date"
+              id="event-date"
+              name="eventDate"
+              aria-describedby="date-hint"
+              required
+            />
+            <span id="date-hint" class="sr-only"
+              >Choose a date later than today.</span
+            >
+          </div>
+          <div id="credential-field" class="full-width" hidden>
+            <label for="credential" id="credential-label">Student I#</label>
+            <input
+              type="text"
+              id="credential"
+              name="credential"
+              aria-describedby="credential-hint"
+              disabled
+            />
+            <p class="hint" id="credential-hint"></p>
+          </div>
+
+          <button type="submit" class="full-width">Create Ticket</button>
+        </div>
+      </form>
+
+      <section
+        id="errors"
+        class="errors"
+        role="alert"
+        aria-labelledby="errors-title"
+        hidden
+      >
+        <h2 id="errors-title">Please correct the following:</h2>
+        <ul id="error-list"></ul>
+      </section>
+
+      <section
+        id="ticket"
+        class="ticket"
+        aria-labelledby="ticket-title"
+        tabindex="-1"
+        hidden
+      >
+        <p class="eyebrow">ADMIT ONE</p>
+        <h2 id="ticket-title">Your Event Ticket</h2>
+        <p>Your sign-up is complete. Here are your ticket details.</p>
+        <dl>
+          <div>
+            <dt>Name</dt>
+            <dd id="ticket-name"></dd>
+          </div>
+          <div>
+            <dt>Email</dt>
+            <dd id="ticket-email"></dd>
+          </div>
+          <div>
+            <dt>Event Date</dt>
+            <dd id="ticket-date"></dd>
+          </div>
+          <div>
+            <dt>Type</dt>
+            <dd id="ticket-type"></dd>
+          </div>
+        </dl>
+        <p class="hint">
+          Classroom demonstration: this page does not send or save your
+          information.
+        </p>
+      </section>
+      <noscript
+        ><p class="errors">
+          Enable JavaScript to validate the form and generate a ticket.
+        </p></noscript
+      >
+    </main>
+  </body>
+</html>
