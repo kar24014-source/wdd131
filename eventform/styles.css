@@ -161,12 +161,3 @@ dd {
     grid-template-columns: minmax(0, 1fr);
   }
 }
-@media print {
-  body {
-    display: block;
-    min-height: auto;
-    padding: 24px;
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
-  }
-}
