@@ -1,24 +1,23 @@
-
 body {
-  font-family: Arial, sans-serif;
-  background:  #baceda;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
   margin: 0;
+  padding: 16px;
+  font-family: Arial, sans-serif;
+  background: #baceda;
 }
 
 main {
-  width: calc(100% - 32px);
-  max-width: 700px;
-  margin: 50px auto;
- 
+  width: 100%;
+  max-width: 850px;
+  padding: 26px;
   background: white;
   border-radius: 12px;
 }
 
 form {
-  padding: 26px;
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgb(30 50 65 / 12%);
 }
 
 h1 {
@@ -47,11 +46,11 @@ select,
 button {
   box-sizing: border-box;
   width: 100%;
-  min-width: 0;
   min-height: 44px;
   padding: 10px;
   font: inherit;
 }
+
 button {
   background-color: #baceda;
 }
